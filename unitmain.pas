@@ -368,7 +368,7 @@ start: QWord;  // time calculation
 //x: double;
 begin
 start := getTickCount64;
-      // svn test
+      // svn test     /*/ plus exe
 Labelf1.Caption := inttostr( TrackBarf1.Position );
 Labelf2.Caption := inttostr( TrackBarf2.Position );
 Labelf3.Caption := inttostr( TrackBarf3.Position );

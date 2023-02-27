@@ -8,9 +8,10 @@
       <Unit>
         <Filename Value="FftVisualizer.lpr"/>
         <IsPartOfProject Value="True"/>
+        <IsVisibleTab Value="True"/>
         <EditorIndex Value="1"/>
-        <TopLine Value="5"/>
-        <CursorPos X="45" Y="22"/>
+        <TopLine Value="12"/>
+        <CursorPos X="15" Y="42"/>
         <UsageCount Value="137"/>
         <Loaded Value="True"/>
       </Unit>
@@ -21,9 +22,8 @@
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
         <UnitName Value="unitMain"/>
-        <IsVisibleTab Value="True"/>
-        <TopLine Value="360"/>
-        <CursorPos X="18" Y="371"/>
+        <TopLine Value="367"/>
+        <CursorPos X="36" Y="371"/>
         <UsageCount Value="20"/>
         <Loaded Value="True"/>
         <LoadedDesigner Value="True"/>
@@ -250,7 +250,7 @@
         <UsageCount Value="10"/>
       </Unit>
     </Units>
-    <JumpHistory HistoryIndex="7">
+    <JumpHistory HistoryIndex="9">
       <Position>
         <Filename Value="unitmain.pas"/>
         <Caret Line="15" Column="3"/>
@@ -279,6 +279,14 @@
       <Position>
         <Filename Value="unitmain.pas"/>
         <Caret Line="373" Column="80" TopLine="222"/>
+      </Position>
+      <Position>
+        <Filename Value="unitmain.pas"/>
+        <Caret Line="371" Column="36" TopLine="357"/>
+      </Position>
+      <Position>
+        <Filename Value="FftVisualizer.lpr"/>
+        <Caret Line="44" TopLine="12"/>
       </Position>
     </JumpHistory>
     <RunParams>
