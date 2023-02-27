@@ -1,0 +1,69 @@
+object FormSin: TFormSin
+  Left = 1108
+  Height = 295
+  Top = 112
+  Width = 798
+  Caption = 'FormSin'
+  ClientHeight = 295
+  ClientWidth = 798
+  OnCreate = FormCreate
+  LCLVersion = '2.2.4.0'
+  object Chart1: TChart
+    Left = 0
+    Height = 295
+    Top = 0
+    Width = 798
+    AxisList = <    
+      item
+        Marks.LabelBrush.Style = bsClear
+        Minors = <>
+        Title.LabelFont.Orientation = 900
+        Title.LabelBrush.Style = bsClear
+      end    
+      item
+        Intervals.Count = 10
+        TickLength = 1
+        Alignment = calBottom
+        Marks.LabelBrush.Style = bsClear
+        Minors = <>
+        Title.Visible = True
+        Title.Caption = 'time'
+        Title.LabelBrush.Style = bsClear
+      end>
+    Legend.Alignment = laBottomCenter
+    Legend.ColumnCount = 8
+    Legend.Visible = True
+    Title.Text.Strings = (
+      'TAChart'
+    )
+    Align = alClient
+    object Chart1LineSeries1: TLineSeries
+      LinePen.Color = clRed
+    end
+    object Chart1LineSeries2: TLineSeries
+      LinePen.Color = clLime
+    end
+    object Chart1LineSeries3: TLineSeries
+      LinePen.Color = clBlue
+    end
+    object Chart1LineSeries4: TLineSeries
+    end
+    object Chart1LineSeries5: TLineSeries
+      LinePen.Color = clMaroon
+    end
+    object Chart1LineSeries6: TLineSeries
+      LinePen.Color = clTeal
+    end
+    object Chart1LineSeries7: TLineSeries
+      LinePen.Color = clPurple
+    end
+    object Chart1LineSeries8: TLineSeries
+      LinePen.Width = 2
+    end
+  end
+  object Timer1: TTimer
+    OnTimer = Timer1Timer
+    Left = 56
+    Top = 32
+  end
+end
