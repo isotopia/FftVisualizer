@@ -10,9 +10,9 @@ uses
 
 type
 
-  { TForm1 }
+  { TFormMain }
 
-  TForm1 = class(TForm)
+  TFormMain = class(TForm)
     Amplitude: TLabel;
     Amplitude1: TLabel;
     Button1: TButton;
@@ -132,13 +132,13 @@ type
   end;
 
 var
-  Form1: TForm1;
+  FormMain: TFormMain;
 
 implementation
 
 {$R *.lfm}
 
-{ TForm1 }
+{ TFormMain }
  
 //Type SArray = Array of String;
 //Type RArray = Array of Real;
@@ -167,9 +167,6 @@ begin
 	result:= Ang;
 
 end;
-
-
-
 
 
 
@@ -360,7 +357,7 @@ end;
 
 
 
-procedure TForm1.Timer1Timer(Sender: TObject);
+procedure TFormMain.Timer1Timer(Sender: TObject);
 const
 N = 1024; ///sample per ref 1 hz
 
@@ -371,7 +368,7 @@ start: QWord;  // time calculation
 //x: double;
 begin
 start := getTickCount64;
-
+      // svn test
 Labelf1.Caption := inttostr( TrackBarf1.Position );
 Labelf2.Caption := inttostr( TrackBarf2.Position );
 Labelf3.Caption := inttostr( TrackBarf3.Position );
@@ -523,14 +520,14 @@ Label_I_FftTime.Caption := ('Inverse FFT time ' + IntToStr(GetTickCount64-start)
 
 end;
 
-procedure TForm1.TrackBarThresholdChange(Sender: TObject);
+procedure TFormMain.TrackBarThresholdChange(Sender: TObject);
 begin
   Labelphase.Caption:= floattostr( TrackBarThreshold.Position /1000)  ;
   FFTthreshold :=  TrackBarThreshold.Position /1000
 end;
 
 
-procedure TForm1.FormCreate(Sender: TObject);
+procedure TFormMain.FormCreate(Sender: TObject);
 begin
    setLength( RawDataQ , 8 , 2048 )  ;
    setLength( RawDataI , 8 , 2048 )  ;
@@ -540,7 +537,7 @@ begin
 
 end;
 
-procedure TForm1.Panel3Click(Sender: TObject);
+procedure TFormMain.Panel3Click(Sender: TObject);
 begin
 
 end;
@@ -548,12 +545,12 @@ end;
 
 
 
-procedure TForm1.ButtonShowSinClick(Sender: TObject);
+procedure TFormMain.ButtonShowSinClick(Sender: TObject);
 begin
   Form_IFftView.Show;
 end;
 
-procedure TForm1.Button_I_FftMemoClick(Sender: TObject);
+procedure TFormMain.Button_I_FftMemoClick(Sender: TObject);
   var
 i: Integer;
 begin
@@ -567,7 +564,7 @@ begin
 end;
 
 
-procedure TForm1.ButtonFftMemoClick(Sender: TObject);
+procedure TFormMain.ButtonFftMemoClick(Sender: TObject);
 var
 i: Integer;
 begin
@@ -582,7 +579,7 @@ begin
    end;
 end;
 
-procedure TForm1.ButtonSinMemoClick(Sender: TObject);
+procedure TFormMain.ButtonSinMemoClick(Sender: TObject);
 var
 i: Integer;
 begin
@@ -611,12 +608,12 @@ begin
 
 end;
 
-procedure TForm1.Button1Click(Sender: TObject);
+procedure TFormMain.Button1Click(Sender: TObject);
 begin
   FormFftView.Show;
 end;
 
-procedure TForm1.Button_I_FftMemo1Click(Sender: TObject);
+procedure TFormMain.Button_I_FftMemo1Click(Sender: TObject);
 begin
   memo1.Clear;
 end;
@@ -628,7 +625,7 @@ end.
 
 
 {
-procedure TForm1.StoreFormState;         /// xml save form status
+procedure TFormMain.StoreFormState;         /// xml save form status
 begin
   with XMLConfig1 do begin
     SetValue('NormalLeft', Left);

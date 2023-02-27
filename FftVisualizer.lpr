@@ -10,8 +10,7 @@ uses
   athreads,
   {$ENDIF}
   Interfaces, // this includes the LCL widgetset
-  Forms, tachartlazaruspkg, unitMain, unitChart, unitFftView, unitIFftView1
-  { you can add units after this };
+  Forms, unitChart, unitFftView, unitIFftView1, unitMain, tachartlazaruspkg;
 
 {$R *.res}
 
@@ -19,15 +18,24 @@ begin
   RequireDerivedFormResource:=True;
   Application.Scaled:=True;
   Application.Initialize;
-  Application.CreateForm(TForm1, Form1);
+
+  Application.CreateForm(TFormmain, Formmain);
   Application.CreateForm(TFormSin, FormSin);
   Application.CreateForm(TFormFftView, FormFftView);
   Application.CreateForm(TForm_IFftView, Form_IFftView);
+
   formsin.Show;
-
-
   FormFftView.Show;
   Form_IFftView.Show;
+
+
+
+
+ // formsin.Show;
+
+
+ // FormFftView.Show;
+//  Form_IFftView.Show;
 
 
   Application.Run;

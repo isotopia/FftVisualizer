@@ -51,6 +51,8 @@ var
 i: Integer;
 x: Double;
 begin
+
+  // versio test
    ChartFFTLineSeries1.Clear;
    ChartFFTLineSeries2.Clear;
    ChartFFTLineSeries3.Clear;

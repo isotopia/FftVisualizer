@@ -38,23 +38,31 @@
         <IsPartOfProject Value="True"/>
       </Unit>
       <Unit>
-        <Filename Value="..\FFT-Creator-test\unitmain.pas"/>
+        <Filename Value="unitmain.pas"/>
         <IsPartOfProject Value="True"/>
-        <ComponentName Value="Form1"/>
+        <ComponentName Value="FormMain"/>
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
         <UnitName Value="unitMain"/>
       </Unit>
       <Unit>
-        <Filename Value="..\FFT-Creator-test\unitchart.pas"/>
+        <Filename Value="unitmain.lfm"/>
         <IsPartOfProject Value="True"/>
-        <ComponentName Value="FormSin"/>
-        <HasResources Value="True"/>
-        <ResourceBaseClass Value="Form"/>
-        <UnitName Value="unitChart"/>
       </Unit>
       <Unit>
-        <Filename Value="..\FFT-Creator-test\unitfftview.pas"/>
+        <Filename Value="unitifftview1.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="Form_IFftView"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="unitIFftView1"/>
+      </Unit>
+      <Unit>
+        <Filename Value="unitifftview1.lfm"/>
+        <IsPartOfProject Value="True"/>
+      </Unit>
+      <Unit>
+        <Filename Value="unitfftview.pas"/>
         <IsPartOfProject Value="True"/>
         <ComponentName Value="FormFftView"/>
         <HasResources Value="True"/>
@@ -62,12 +70,24 @@
         <UnitName Value="unitFftView"/>
       </Unit>
       <Unit>
-        <Filename Value="..\FFT-Creator-test\unitifftview1.pas"/>
+        <Filename Value="unitfftview.lfm"/>
         <IsPartOfProject Value="True"/>
-        <ComponentName Value="Form_IFftView"/>
+      </Unit>
+      <Unit>
+        <Filename Value="unitchart.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FormSin"/>
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
-        <UnitName Value="unitIFftView1"/>
+        <UnitName Value="unitChart"/>
+      </Unit>
+      <Unit>
+        <Filename Value="unitchart.lfm"/>
+        <IsPartOfProject Value="True"/>
+      </Unit>
+      <Unit>
+        <Filename Value="FftVisualizer.res"/>
+        <IsPartOfProject Value="True"/>
       </Unit>
     </Units>
   </ProjectOptions>

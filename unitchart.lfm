@@ -62,6 +62,7 @@ object FormSin: TFormSin
     end
   end
   object Timer1: TTimer
+    Interval = 500
     OnTimer = Timer1Timer
     Left = 56
     Top = 32

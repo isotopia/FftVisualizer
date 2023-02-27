@@ -8,25 +8,119 @@
       <Unit>
         <Filename Value="FftVisualizer.lpr"/>
         <IsPartOfProject Value="True"/>
-        <CursorPos X="59" Y="19"/>
+        <EditorIndex Value="1"/>
+        <TopLine Value="5"/>
+        <CursorPos X="45" Y="22"/>
         <UsageCount Value="137"/>
         <Loaded Value="True"/>
       </Unit>
       <Unit>
-        <Filename Value="..\FFT-Creator-test\unitmain.pas"/>
+        <Filename Value="unitmain.pas"/>
         <IsPartOfProject Value="True"/>
-        <ComponentName Value="Form1"/>
+        <ComponentName Value="FormMain"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="unitMain"/>
+        <IsVisibleTab Value="True"/>
+        <TopLine Value="360"/>
+        <CursorPos X="18" Y="371"/>
+        <UsageCount Value="20"/>
+        <Loaded Value="True"/>
+        <LoadedDesigner Value="True"/>
+      </Unit>
+      <Unit>
+        <Filename Value="unitmain.lfm"/>
+        <IsPartOfProject Value="True"/>
+        <EditorIndex Value="-1"/>
+        <UsageCount Value="20"/>
+        <DefaultSyntaxHighlighter Value="LFM"/>
+      </Unit>
+      <Unit>
+        <Filename Value="unitifftview1.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="Form_IFftView"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="unitIFftView1"/>
+        <EditorIndex Value="4"/>
+        <TopLine Value="26"/>
+        <CursorPos X="23" Y="50"/>
+        <UsageCount Value="20"/>
+        <Loaded Value="True"/>
+        <LoadedDesigner Value="True"/>
+      </Unit>
+      <Unit>
+        <Filename Value="unitifftview1.lfm"/>
+        <IsPartOfProject Value="True"/>
+        <EditorIndex Value="-1"/>
+        <UsageCount Value="20"/>
+        <DefaultSyntaxHighlighter Value="LFM"/>
+      </Unit>
+      <Unit>
+        <Filename Value="unitfftview.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FormFftView"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="unitFftView"/>
+        <EditorIndex Value="2"/>
+        <TopLine Value="43"/>
+        <CursorPos X="17" Y="55"/>
+        <UsageCount Value="20"/>
+        <Loaded Value="True"/>
+        <LoadedDesigner Value="True"/>
+      </Unit>
+      <Unit>
+        <Filename Value="unitfftview.lfm"/>
+        <IsPartOfProject Value="True"/>
+        <EditorIndex Value="-1"/>
+        <UsageCount Value="20"/>
+        <DefaultSyntaxHighlighter Value="LFM"/>
+      </Unit>
+      <Unit>
+        <Filename Value="unitchart.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FormSin"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="unitChart"/>
+        <EditorIndex Value="3"/>
+        <TopLine Value="76"/>
+        <CursorPos X="20" Y="90"/>
+        <UsageCount Value="20"/>
+        <Loaded Value="True"/>
+        <LoadedDesigner Value="True"/>
+      </Unit>
+      <Unit>
+        <Filename Value="unitchart.lfm"/>
+        <IsPartOfProject Value="True"/>
+        <EditorIndex Value="-1"/>
+        <UsageCount Value="20"/>
+        <DefaultSyntaxHighlighter Value="LFM"/>
+      </Unit>
+      <Unit>
+        <Filename Value="FftVisualizer.res"/>
+        <IsPartOfProject Value="True"/>
+        <EditorIndex Value="-1"/>
+        <WindowIndex Value="-1"/>
+        <TopLine Value="-1"/>
+        <CursorPos X="-1" Y="-1"/>
+        <UsageCount Value="20"/>
+        <DefaultSyntaxHighlighter Value="None"/>
+      </Unit>
+      <Unit>
+        <Filename Value="..\FFT-Creator-test\unitmain.pas"/>
+        <ComponentName Value="FormMain"/>
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
         <UnitName Value="unitMain"/>
         <EditorIndex Value="-1"/>
-        <TopLine Value="4"/>
-        <CursorPos X="15" Y="621"/>
+        <TopLine Value="360"/>
+        <CursorPos X="82" Y="361"/>
         <UsageCount Value="137"/>
       </Unit>
       <Unit>
         <Filename Value="..\FFT-Creator-test\unitchart.pas"/>
-        <IsPartOfProject Value="True"/>
         <ComponentName Value="FormSin"/>
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
@@ -38,7 +132,6 @@
       </Unit>
       <Unit>
         <Filename Value="..\FFT-Creator-test\unitfftview.pas"/>
-        <IsPartOfProject Value="True"/>
         <ComponentName Value="FormFftView"/>
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
@@ -50,7 +143,6 @@
       </Unit>
       <Unit>
         <Filename Value="..\FFT-Creator-test\unitifftview1.pas"/>
-        <IsPartOfProject Value="True"/>
         <ComponentName Value="Form_IFftView"/>
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
@@ -152,31 +244,41 @@
         <DefaultSyntaxHighlighter Value="LFM"/>
       </Unit>
       <Unit>
-        <Filename Value="unitmain.pas"/>
-        <ComponentName Value="Form1"/>
-        <HasResources Value="True"/>
-        <ResourceBaseClass Value="Form"/>
-        <UnitName Value="unitMain"/>
-        <IsVisibleTab Value="True"/>
-        <EditorIndex Value="1"/>
-        <CursorPos X="28" Y="9"/>
+        <Filename Value="C:\lazarus64\lcl\forms.pp"/>
+        <UnitName Value="Forms"/>
+        <EditorIndex Value="-1"/>
         <UsageCount Value="10"/>
-        <Loaded Value="True"/>
-        <LoadedDesigner Value="True"/>
       </Unit>
     </Units>
-    <JumpHistory HistoryIndex="2">
+    <JumpHistory HistoryIndex="7">
       <Position>
-        <Filename Value="FftVisualizer.lpr"/>
-        <Caret Line="12" Column="17"/>
+        <Filename Value="unitmain.pas"/>
+        <Caret Line="15" Column="3"/>
+      </Position>
+      <Position>
+        <Filename Value="unitchart.pas"/>
+      </Position>
+      <Position>
+        <Filename Value="unitchart.pas"/>
+      </Position>
+      <Position>
+        <Filename Value="unitfftview.pas"/>
+        <Caret Line="12" Column="80"/>
+      </Position>
+      <Position>
+        <Filename Value="unitifftview1.pas"/>
+      </Position>
+      <Position>
+        <Filename Value="unitifftview1.pas"/>
+        <Caret Line="46" Column="54" TopLine="26"/>
       </Position>
       <Position>
         <Filename Value="FftVisualizer.lpr"/>
-        <Caret Line="13" Column="29"/>
+        <Caret Line="27" Column="3"/>
       </Position>
       <Position>
-        <Filename Value="FftVisualizer.lpr"/>
-        <Caret Line="19" Column="59"/>
+        <Filename Value="unitmain.pas"/>
+        <Caret Line="373" Column="80" TopLine="222"/>
       </Position>
     </JumpHistory>
     <RunParams>

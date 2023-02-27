@@ -87,6 +87,7 @@ object FormFftView: TFormFftView
     end
   end
   object Timer1: TTimer
+    Interval = 500
     OnTimer = Timer1Timer
     Left = 360
     Top = 56

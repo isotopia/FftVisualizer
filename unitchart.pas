@@ -81,6 +81,8 @@ var
 i: Integer;
 x: Double;
 begin
+    // svn test
+
  { Chart1LineSeries1.Clear;
   Chart1LineSeries2.Clear;
   Chart1LineSeries3.Clear;         // much faster to keep serie and not recreate avary time

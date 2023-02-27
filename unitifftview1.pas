@@ -47,6 +47,7 @@ begin
          Chart1_I_FFTLineSeries1Ifft_I.AddXY(i, chart_I_FFTdata[0,i]);
          Chart1_I_FFTLineSeries1Ifft_Q.AddXY(i, chart_I_FFTdata[1,i] );
 
+       // version test
       end;
 end;
 
