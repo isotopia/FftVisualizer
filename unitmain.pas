@@ -16,6 +16,7 @@ type
     Amplitude: TLabel;
     Amplitude1: TLabel;
     Button1: TButton;
+    Button2: TButton;
     ButtonFftMemo: TButton;
     Button_I_FftMemo: TButton;
     ButtonShowSin1: TButton;
@@ -40,6 +41,10 @@ type
     Label14: TLabel;
     Label15: TLabel;
     Label16: TLabel;
+    Label17: TLabel;
+    Label18: TLabel;
+    Label19: TLabel;
+    Label20: TLabel;
     LabelFftTime: TLabel;
     LabelFftLowPass: TLabel;
     LabelFftHighPass: TLabel;
@@ -101,6 +106,7 @@ type
     StaticText2: TStaticText;
     StaticText3: TStaticText;
     Timer1: TTimer;
+    TrackBar_I_Phase: TTrackBar;
     TrackBarHighPass: TTrackBar;
     TrackBarLowPass: TTrackBar;
     TrackBarThreshold: TTrackBar;
@@ -113,14 +119,15 @@ type
     TrackBarf7: TTrackBar;
     TrackBarsample: TTrackBar;
     procedure Button1Click(Sender: TObject);
+    procedure Button2Click(Sender: TObject);
     procedure Button_I_FftMemo1Click(Sender: TObject);
     procedure Button_I_FftMemoClick(Sender: TObject);
     procedure ButtonFftMemoClick(Sender: TObject);
     procedure ButtonShowSinClick(Sender: TObject);
     procedure ButtonSinMemoClick(Sender: TObject);
     procedure FormCreate(Sender: TObject);
-    procedure Panel3Click(Sender: TObject);
     procedure Timer1Timer(Sender: TObject);
+    procedure TrackBar_I_PhaseChange(Sender: TObject);
     procedure TrackBarThresholdChange(Sender: TObject);
 
   private
@@ -129,6 +136,7 @@ type
   RawDataI: array of array of double ; //  value stored as a double requires 64 bits;
   RawDataQ: array of array of double ; //  value stored as a double requires 64 bits;
   FFTthreshold : double
+
   end;
 
 var
@@ -386,28 +394,28 @@ formSin.HZ_ref_sample := TrackBarsample.Position   ;
 
 
         RawDataQ[0,i] := ((((SpinEditp1AT.Value -100) /100000)*i) +1 ) * (sin( i*2*pi/N*TrackBarf1.Position+(SpinEditp1.Value/180*pi))*(0.01*SpinEdita1.Value))+SpinEditO1.Value  ;
-        RawDataI[0,i] := ((((SpinEditp1AT.Value -100) /100000)*i) +1 ) * (sin( i*2*pi/N*TrackBarf1.Position+((SpinEditp1.Value + 90) /180*pi))*(0.01*SpinEdita1.Value))+SpinEditO1.Value  ;
+        RawDataI[0,i] := ((((SpinEditp1AT.Value -100) /100000)*i) +1 ) * (sin( i*2*pi/N*TrackBarf1.Position+((SpinEditp1.Value + TrackBar_I_Phase.Position) /180*pi))*(0.01*SpinEdita1.Value))+SpinEditO1.Value  ;
 
         RawDataQ[1,i] := ((((SpinEditp2AT.Value -100) /100000)*i) +1 ) * (sin( i*2*pi/N*TrackBarf2.Position+(SpinEditp2.Value/180*pi))*(0.01*SpinEdita2.Value))+SpinEditO2.Value  ;
-        RawDatai[1,i] := ((((SpinEditp2AT.Value -100) /100000)*i) +1 ) * (sin( i*2*pi/N*TrackBarf2.Position+((SpinEditp2.Value + 90) /180*pi))*(0.01*SpinEdita2.Value))+SpinEditO2.Value  ;
+        RawDatai[1,i] := ((((SpinEditp2AT.Value -100) /100000)*i) +1 ) * (sin( i*2*pi/N*TrackBarf2.Position+((SpinEditp2.Value + TrackBar_I_Phase.Position) /180*pi))*(0.01*SpinEdita2.Value))+SpinEditO2.Value  ;
 
         RawDataQ[2,i] := ((((SpinEditp3AT.Value -100) /100000)*i) +1 ) * (sin( i*2*pi/N*TrackBarf3.Position+(SpinEditp3.Value/180*pi))*(0.01*SpinEdita3.Value))+SpinEditO3.Value  ;
-        RawDataI[2,i] := ((((SpinEditp3AT.Value -100) /100000)*i) +1 ) * (sin( i*2*pi/N*TrackBarf3.Position+((SpinEditp3.Value + 90) /180*pi))*(0.01*SpinEdita3.Value))+SpinEditO3.Value  ;
+        RawDataI[2,i] := ((((SpinEditp3AT.Value -100) /100000)*i) +1 ) * (sin( i*2*pi/N*TrackBarf3.Position+((SpinEditp3.Value + TrackBar_I_Phase.Position) /180*pi))*(0.01*SpinEdita3.Value))+SpinEditO3.Value  ;
 
 
         RawDataQ[3,i] := ((((SpinEditp4AT.Value -100) /100000)*i) +1 ) * (sin( i*2*pi/N*TrackBarf4.Position+(SpinEditp4.Value/180*pi))*(0.01*SpinEdita4.Value))+SpinEditO4.Value  ;
-        RawDataI[3,i] := ((((SpinEditp4AT.Value -100) /100000)*i) +1 ) * (sin( i*2*pi/N*TrackBarf4.Position+((SpinEditp4.Value + 90) /180*pi))*(0.01*SpinEdita4.Value))+SpinEditO4.Value  ;
+        RawDataI[3,i] := ((((SpinEditp4AT.Value -100) /100000)*i) +1 ) * (sin( i*2*pi/N*TrackBarf4.Position+((SpinEditp4.Value + TrackBar_I_Phase.Position) /180*pi))*(0.01*SpinEdita4.Value))+SpinEditO4.Value  ;
 
         RawDataQ[4,i] := ((((SpinEditp5AT.Value -100) /100000)*i) +1 ) * (sin( i*2*pi/N*TrackBarf5.Position+(SpinEditp5.Value/180*pi))*(0.01*SpinEdita5.Value))+SpinEditO5.Value  ;
-        RawDataI[4,i] := ((((SpinEditp5AT.Value -100) /100000)*i) +1 ) * (sin( i*2*pi/N*TrackBarf5.Position+((SpinEditp5.Value + 90) /180*pi))*(0.01*SpinEdita5.Value))+SpinEditO5.Value  ;
+        RawDataI[4,i] := ((((SpinEditp5AT.Value -100) /100000)*i) +1 ) * (sin( i*2*pi/N*TrackBarf5.Position+((SpinEditp5.Value + TrackBar_I_Phase.Position) /180*pi))*(0.01*SpinEdita5.Value))+SpinEditO5.Value  ;
 
 
         RawDataQ[5,i] := ((((SpinEditp6AT.Value -100) /100000)*i) +1 ) * (sin( i*2*pi/N*TrackBarf6.Position+(SpinEditp6.Value/180*pi))*(0.01*SpinEdita6.Value))+SpinEditO6.Value  ;
-        RawDataI[5,i] := ((((SpinEditp6AT.Value -100) /100000)*i) +1 ) * (sin( i*2*pi/N*TrackBarf6.Position+((SpinEditp6.Value + 90) /180*pi))*(0.01*SpinEdita6.Value))+SpinEditO6.Value  ;
+        RawDataI[5,i] := ((((SpinEditp6AT.Value -100) /100000)*i) +1 ) * (sin( i*2*pi/N*TrackBarf6.Position+((SpinEditp6.Value + TrackBar_I_Phase.Position) /180*pi))*(0.01*SpinEdita6.Value))+SpinEditO6.Value  ;
 
 
         RawDataQ[6,i] := ((((SpinEditp7AT.Value -100) /100000)*i) +1 ) * (sin( i*2*pi/N*TrackBarf7.Position+(SpinEditp7.Value/180*pi))*(0.01*SpinEdita7.Value))+SpinEditO7.Value  ;
-        RawDataI[6,i] := ((((SpinEditp7AT.Value -100) /100000)*i) +1 ) * (sin( i*2*pi/N*TrackBarf7.Position+((SpinEditp7.Value + 90) /180*pi))*(0.01*SpinEdita7.Value))+SpinEditO7.Value  ;
+        RawDataI[6,i] := ((((SpinEditp7AT.Value -100) /100000)*i) +1 ) * (sin( i*2*pi/N*TrackBarf7.Position+((SpinEditp7.Value + TrackBar_I_Phase.Position) /180*pi))*(0.01*SpinEdita7.Value))+SpinEditO7.Value  ;
 
         RawDataQ[7,i] := (0.01*SpinEdita8.Value) * (RawDataQ[0,i] + RawDataQ[1,i] + RawDataQ[2,i] + RawDataQ[3,i]
                                                   + RawDataQ[4,i] + RawDataQ[5,i] + RawDataQ[6,i]                );
@@ -520,6 +528,11 @@ Label_I_FftTime.Caption := ('Inverse FFT time ' + IntToStr(GetTickCount64-start)
 
 end;
 
+procedure TFormMain.TrackBar_I_PhaseChange(Sender: TObject);
+begin
+     Label20.Caption:= 'current imaginary angle is ' + inttostr(TrackBar_I_Phase.Position) + ' deg'  ;
+end;
+
 procedure TFormMain.TrackBarThresholdChange(Sender: TObject);
 begin
   Labelphase.Caption:= floattostr( TrackBarThreshold.Position /1000)  ;
@@ -537,17 +550,13 @@ begin
 
 end;
 
-procedure TFormMain.Panel3Click(Sender: TObject);
-begin
-
-end;
-
 
 
 
 procedure TFormMain.ButtonShowSinClick(Sender: TObject);
 begin
-  Form_IFftView.Show;
+ FormSin.Show;
+ //Form_IFftView.Show;
 end;
 
 procedure TFormMain.Button_I_FftMemoClick(Sender: TObject);
@@ -612,6 +621,12 @@ procedure TFormMain.Button1Click(Sender: TObject);
 begin
   FormFftView.Show;
 end;
+
+procedure TFormMain.Button2Click(Sender: TObject);
+begin
+  trackbar_I_phase.Position:= 90 ;
+end;
+
 
 procedure TFormMain.Button_I_FftMemo1Click(Sender: TObject);
 begin

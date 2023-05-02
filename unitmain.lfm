@@ -1,19 +1,19 @@
 object FormMain: TFormMain
   Left = 348
-  Height = 700
+  Height = 715
   Top = 131
-  Width = 739
+  Width = 748
   BorderStyle = bsDialog
   Caption = 'FFT Creator Main Form'
-  ClientHeight = 700
-  ClientWidth = 739
+  ClientHeight = 715
+  ClientWidth = 748
   OnCreate = FormCreate
   LCLVersion = '2.2.4.0'
   object Memo1: TMemo
     Left = 0
-    Height = 140
-    Top = 560
-    Width = 739
+    Height = 75
+    Top = 640
+    Width = 748
     Align = alClient
     Lines.Strings = (
       'Copy to Paste Window'
@@ -25,18 +25,18 @@ object FormMain: TFormMain
   object Panel1: TPanel
     Left = 0
     Height = 182
-    Top = 322
-    Width = 739
+    Top = 402
+    Width = 748
     Align = alTop
     ClientHeight = 182
-    ClientWidth = 739
+    ClientWidth = 748
     ParentFont = False
     TabOrder = 1
     object StaticText1: TStaticText
       Left = 1
       Height = 23
       Top = 1
-      Width = 737
+      Width = 746
       Align = alTop
       Alignment = taCenter
       Caption = 'Controls for FormFFT View'
@@ -106,7 +106,7 @@ object FormMain: TFormMain
     object Button1: TButton
       Left = 616
       Height = 25
-      Top = 24
+      Top = 38
       Width = 119
       Caption = 'Show Form FFTview'
       OnClick = Button1Click
@@ -201,12 +201,12 @@ object FormMain: TFormMain
   end
   object Panel2: TPanel
     Left = 0
-    Height = 322
+    Height = 402
     Top = 0
-    Width = 739
+    Width = 748
     Align = alTop
-    ClientHeight = 322
-    ClientWidth = 739
+    ClientHeight = 402
+    ClientWidth = 748
     TabOrder = 2
     object TrackBarf1: TTrackBar
       Left = 48
@@ -623,10 +623,10 @@ object FormMain: TFormMain
       TabOrder = 28
     end
     object TrackBarsample: TTrackBar
-      Left = 48
+      Left = 463
       Height = 25
       Top = 32
-      Width = 256
+      Width = 72
       Frequency = 1024
       LineSize = 1000
       Max = 20000
@@ -647,7 +647,7 @@ object FormMain: TFormMain
       ParentColor = False
     end
     object LabelSample: TLabel
-      Left = 320
+      Left = 56
       Height = 15
       Top = 32
       Width = 24
@@ -731,7 +731,7 @@ object FormMain: TFormMain
       Left = 1
       Height = 24
       Top = 1
-      Width = 737
+      Width = 746
       Align = alTop
       Alignment = taCenter
       Caption = 'Controls for the FormSin'
@@ -741,30 +741,49 @@ object FormMain: TFormMain
       Transparent = False
     end
     object ButtonSinMemo: TButton
-      Left = 464
+      Left = 536
       Height = 25
-      Top = 24
+      Top = 22
       Width = 75
       Caption = 'Sin To Memo'
       OnClick = ButtonSinMemoClick
       TabOrder = 40
     end
+    object TrackBar_I_Phase: TTrackBar
+      Left = 24
+      Height = 25
+      Top = 368
+      Width = 531
+      Frequency = 10
+      Max = 360
+      OnChange = TrackBar_I_PhaseChange
+      Position = 90
+      TabOrder = 41
+    end
+    object Button2: TButton
+      Left = 112
+      Height = 18
+      Top = 344
+      Width = 112
+      Caption = 'reset to 90 Deg'
+      OnClick = Button2Click
+      TabOrder = 42
+    end
   end
   object Panel3: TPanel
     Left = 0
     Height = 56
-    Top = 504
-    Width = 739
+    Top = 584
+    Width = 748
     Align = alTop
     ClientHeight = 56
-    ClientWidth = 739
+    ClientWidth = 748
     TabOrder = 3
-    OnClick = Panel3Click
     object StaticText3: TStaticText
       Left = 1
       Height = 23
       Top = 1
-      Width = 737
+      Width = 746
       Align = alTop
       Alignment = taCenter
       Caption = 'Controls for Form Inverse FFT View'
@@ -812,7 +831,7 @@ object FormMain: TFormMain
       ParentFont = False
     end
     object Button_I_FftMemo: TButton
-      Left = 464
+      Left = 496
       Height = 25
       Top = 24
       Width = 88
@@ -850,7 +869,7 @@ object FormMain: TFormMain
   object SpinEditp2AT: TSpinEdit
     Left = 552
     Height = 23
-    Top = 108
+    Top = 110
     Width = 48
     MaxValue = 200
     TabOrder = 5
@@ -859,7 +878,7 @@ object FormMain: TFormMain
   object SpinEditp3AT: TSpinEdit
     Left = 552
     Height = 23
-    Top = 136
+    Top = 140
     Width = 48
     MaxValue = 200
     TabOrder = 6
@@ -868,7 +887,7 @@ object FormMain: TFormMain
   object SpinEditp4AT: TSpinEdit
     Left = 552
     Height = 23
-    Top = 168
+    Top = 170
     Width = 48
     MaxValue = 200
     TabOrder = 7
@@ -886,7 +905,7 @@ object FormMain: TFormMain
   object SpinEditp6AT: TSpinEdit
     Left = 552
     Height = 23
-    Top = 232
+    Top = 230
     Width = 48
     MaxValue = 200
     TabOrder = 9
@@ -901,10 +920,42 @@ object FormMain: TFormMain
     TabOrder = 10
     Value = 100
   end
+  object Label17: TLabel
+    Left = 624
+    Height = 15
+    Top = 328
+    Width = 103
+    Caption = 'Phase Of Imaginary'
+    ParentColor = False
+  end
+  object Label18: TLabel
+    Left = 5
+    Height = 15
+    Top = 328
+    Width = 595
+    Caption = '-----------------------------------------------------------------------------------------------------------------------'
+    ParentColor = False
+  end
+  object Label19: TLabel
+    Left = 624
+    Height = 15
+    Top = 352
+    Width = 85
+    Caption = 'Apply to All Pen'
+    ParentColor = False
+  end
+  object Label20: TLabel
+    Left = 560
+    Height = 15
+    Top = 368
+    Width = 175
+    Caption = 'current imaginary angle is 90 deg'
+    ParentColor = False
+  end
   object Timer1: TTimer
     Interval = 200
     OnTimer = Timer1Timer
-    Left = 248
-    Top = 264
+    Left = 240
+    Top = 288
   end
 end
